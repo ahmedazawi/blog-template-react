@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import Post from "./post";
 import axios from "axios";
-import { Container, Row, Col, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Spinner, Modal, Button } from "react-bootstrap";
 export class posts extends Component {
   state = {
     posts: [],
+    showModal: false,
+    titleModal: null,
+    bodyModal: null,
   };
   componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((json) => {
@@ -23,7 +26,7 @@ export class posts extends Component {
             lg={4}
             key={post.id}
           >
-            <Post post={post} />
+            <Post post={post} openModal={this.openModal} />
           </Col>
         );
       });
@@ -36,6 +39,18 @@ export class posts extends Component {
         </Col>
       );
     }
+  };
+  openModal = (title, body) => {
+    this.showModal();
+    this.setState({ titleModal: title });
+    this.setState({ bodyModal: body });
+  };
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
+  showModal = () => {
+    this.setState({ showModal: true });
   };
 
   render() {
@@ -50,6 +65,25 @@ export class posts extends Component {
         </Row>
 
         <Row>{this.renderPosts()}</Row>
+        <Modal
+          show={this.state.showModal}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          onHide={this.closeModal}
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="contained-modal-title-vcenter">
+              <h4>{this.state.titleModal}</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>{this.state.bodyModal}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.closeModal}>Close</Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     );
   }

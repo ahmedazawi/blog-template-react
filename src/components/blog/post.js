@@ -8,7 +8,12 @@ const post = (props) => {
       <Card.Body>
         <Card.Title>{props.post.title}</Card.Title>
         <Card.Text>{props.post.body}</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button
+          onClick={() => props.openModal(props.post.title, props.post.body)}
+          variant="primary"
+        >
+          Show Post
+        </Button>
       </Card.Body>
     </Card>
   );
