@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/app/static/css/main.52990226.chunk.css",
-    "main.js": "/app/static/js/main.e82bda3a.chunk.js",
-    "main.js.map": "/app/static/js/main.e82bda3a.chunk.js.map",
-    "runtime-main.js": "/app/static/js/runtime-main.73dd60b7.js",
-    "runtime-main.js.map": "/app/static/js/runtime-main.73dd60b7.js.map",
-    "static/js/2.4fb64dbd.chunk.js": "/app/static/js/2.4fb64dbd.chunk.js",
-    "static/js/2.4fb64dbd.chunk.js.map": "/app/static/js/2.4fb64dbd.chunk.js.map",
-    "static/js/3.56c7f806.chunk.js": "/app/static/js/3.56c7f806.chunk.js",
-    "static/js/3.56c7f806.chunk.js.map": "/app/static/js/3.56c7f806.chunk.js.map",
-    "index.html": "/app/index.html",
-    "static/css/main.52990226.chunk.css.map": "/app/static/css/main.52990226.chunk.css.map",
-    "static/js/2.4fb64dbd.chunk.js.LICENSE.txt": "/app/static/js/2.4fb64dbd.chunk.js.LICENSE.txt",
-    "static/media/main.css": "/app/static/media/1.3c33a0b4.jpeg"
+    "main.css": "/blog-template-react/static/css/main.fe568216.chunk.css",
+    "main.js": "/blog-template-react/static/js/main.75e9a12e.chunk.js",
+    "main.js.map": "/blog-template-react/static/js/main.75e9a12e.chunk.js.map",
+    "runtime-main.js": "/blog-template-react/static/js/runtime-main.9bba76a9.js",
+    "runtime-main.js.map": "/blog-template-react/static/js/runtime-main.9bba76a9.js.map",
+    "static/js/2.4fb64dbd.chunk.js": "/blog-template-react/static/js/2.4fb64dbd.chunk.js",
+    "static/js/2.4fb64dbd.chunk.js.map": "/blog-template-react/static/js/2.4fb64dbd.chunk.js.map",
+    "static/js/3.56c7f806.chunk.js": "/blog-template-react/static/js/3.56c7f806.chunk.js",
+    "static/js/3.56c7f806.chunk.js.map": "/blog-template-react/static/js/3.56c7f806.chunk.js.map",
+    "index.html": "/blog-template-react/index.html",
+    "static/css/main.fe568216.chunk.css.map": "/blog-template-react/static/css/main.fe568216.chunk.css.map",
+    "static/js/2.4fb64dbd.chunk.js.LICENSE.txt": "/blog-template-react/static/js/2.4fb64dbd.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/blog-template-react/static/media/1.3c33a0b4.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.73dd60b7.js",
+    "static/js/runtime-main.9bba76a9.js",
     "static/js/2.4fb64dbd.chunk.js",
-    "static/css/main.52990226.chunk.css",
-    "static/js/main.e82bda3a.chunk.js"
+    "static/css/main.fe568216.chunk.css",
+    "static/js/main.75e9a12e.chunk.js"
   ]
 }
