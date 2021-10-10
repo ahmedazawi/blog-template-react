@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 export class NotFound extends Component {
   componentDidMount() {
-    this.props.history.replace("/404"); // replace the pathname
+    console.log(this.props);
+    // this.props.history.replace("/404"); // replace the pathname
+    console.log(this.props);
   }
   render() {
     return (

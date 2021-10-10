@@ -16,8 +16,8 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App">
-        <BrowserRouter basename="/app">
+      <>
+        <BrowserRouter basename="/blog-template-react">
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
@@ -38,12 +38,12 @@ class App extends Component {
               <Redirect from="/posts/add-post" to="/" />
             )}
             <Route path="/posts/:id" component={SinglePost} />
-            <Redirect from="/home" to="/" />
+            {/* <Redirect from="/home" to="/" /> */}
             <Route component={NotFound} />
           </Switch>
           <Footer />
         </BrowserRouter>
-      </div>
+      </>
     );
   }
 }

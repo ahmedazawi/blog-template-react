@@ -11,7 +11,7 @@ const header = () => {
       variant="dark"
     >
       <Container>
-        <Navbar.Brand href="/">Blog</Navbar.Brand>
+        <Navbar.Brand>Blog</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
