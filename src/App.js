@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from "react";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/layout/header";
 import Blog from "./views/blog";
 import Home from "./views/home";
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <HashRouter basename="/blog-template-react">
+        <BrowserRouter basename="/blog-template-react">
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
@@ -42,7 +42,7 @@ class App extends Component {
             <Route component={NotFound} />
           </Switch>
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
       </>
     );
   }
