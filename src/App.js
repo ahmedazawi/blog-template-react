@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <BrowserRouter basename="/blog-template-react">
+        <BrowserRouter basename="/app">
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
