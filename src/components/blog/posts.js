@@ -1,18 +1,20 @@
 import React, { Component } from "react";
+import { withRouter, Link } from "react-router-dom";
 import Post from "./post";
+import Loader from "../layout/Loader";
 import axios from "axios";
-import { Container, Row, Col, Spinner, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 export class posts extends Component {
   state = {
     posts: [],
     showModal: false,
     titleModal: null,
     bodyModal: null,
+    idModal: null,
   };
   componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((json) => {
       this.setState({ posts: json.data });
-      // console.log(this.state.posts);
     });
   }
 
@@ -31,17 +33,12 @@ export class posts extends Component {
         );
       });
     } else {
-      return (
-        <Col lg={12} className="spinner">
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        </Col>
-      );
+      return <Loader />;
     }
   };
-  openModal = (title, body) => {
+  openModal = (id, title, body) => {
     this.showModal();
+    this.setState({ idModal: id });
     this.setState({ titleModal: title });
     this.setState({ bodyModal: body });
   };
@@ -81,6 +78,15 @@ export class posts extends Component {
             <p>{this.state.bodyModal}</p>
           </Modal.Body>
           <Modal.Footer>
+            <Link
+              className="btn btn-primary"
+              to={{
+                pathname: "/posts/" + this.state.idModal,
+                state: this.state,
+              }}
+            >
+              Show
+            </Link>
             <Button onClick={this.closeModal}>Close</Button>
           </Modal.Footer>
         </Modal>
@@ -89,4 +95,4 @@ export class posts extends Component {
   }
 }
 
-export default posts;
+export default withRouter(posts);

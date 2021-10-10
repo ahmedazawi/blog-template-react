@@ -1,14 +1,14 @@
 import React from "react";
 import Head from "../components/blog/head";
-import Posts from "../components/blog/posts";
+import Home from "../components/Home";
 
-const blog = () => {
+const home = () => {
   return (
     <>
       <Head />
-      <Posts />
+      <Home />
     </>
   );
 };
 
-export default blog;
+export default home;

@@ -21,3 +21,24 @@ html {
   justify-content: center;
   align-items: center;
 }
+.home-head {
+  display: flex;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #454647;
+  border-radius: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link.active {
+  color: white !important;
+}
+.single-post-title {
+  display: flex;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #454647;
+  border-radius: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
